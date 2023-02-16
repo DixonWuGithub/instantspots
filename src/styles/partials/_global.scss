@@ -1,0 +1,12 @@
+@use "./reset";
+@use "./variables" as *;
+
+.prompt {
+    padding: 0.8rem;
+    margin: 1rem 1rem;
+    font-weight: bold;
+}
+
+.promptInput {
+    margin-right: 0.64rem;
+}

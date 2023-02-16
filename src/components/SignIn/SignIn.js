@@ -1,5 +1,3 @@
-
-
 import "./SignIn.scss"
 function SignIn({ setName, setShowSignIn }) {
 
@@ -8,7 +6,6 @@ function SignIn({ setName, setShowSignIn }) {
         setName(e.target.yourName.value)
         setShowSignIn(false)
     }
-
 
     return (
         <div className="signinmodal">
