@@ -1,0 +1,12 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.roombutton {
+    background-color: #e28743;
+    margin: 1rem 1rem;
+    padding: 0.5rem;
+    white-space: normal;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+}

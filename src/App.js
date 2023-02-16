@@ -19,13 +19,11 @@ function App() {
   }, []);
 
 
-  // let name = uuidv4()
   const [name, setName] = useState("")
   const [showSignIn, setShowSignIn] = useState(true)
   const [ask, setAsk] = useState('');
   const [backupAskName, setBackUpAskName] = useState("")
   const sender = { id: id, name: name };
-
 
   if (showSignIn) {
     signInModal = <SignIn setName={setName} setShowSignIn={setShowSignIn} />
@@ -39,15 +37,12 @@ function App() {
       {signInModal}
       <BrowserRouter>
         <Header userName={name} />
-        
         <Routes>
           <Route path="/" element={<AskPage backupAskName={backupAskName} setBackUpAskName={setBackUpAskName} ask={ask} setAsk={setAsk} sender={sender} socket={socket} id={id} name={name} />} />
           <Route path="/recommendations" element={<RequestBoard backupAskName={backupAskName} setBackUpAskName={setBackUpAskName} ask={ask} setAsk={setAsk} sender={sender} socket={socket} id={id} name={name} />} />
-          <Route path="/recommendation" element={<Recommendation backupAskName={backupAskName} setBackUpAskName={setBackUpAskName} ask={ask} setAsk={setAsk} sender={sender} socket={socket} id={id} name={name}/>}/>
+          <Route path="/recommendation" element={<Recommendation backupAskName={backupAskName} setBackUpAskName={setBackUpAskName} ask={ask} setAsk={setAsk} sender={sender} socket={socket} id={id} name={name} />} />
         </Routes>
       </BrowserRouter>
-
-      {/* <Chatbox id={id} name={name} /> */}
     </div>
   );
 }

@@ -1,3 +1,6 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
 .signinmodal {
     width: 100vw;
     height: 100vh;
@@ -10,13 +13,14 @@
     top: 0;
     left: 0;
 
-    &__form{
+    &__form {
         display: flex;
         flex-direction: column;
-
     }
 
-    &__element{
-        margin: 0.2rem;
+    &__element {
+        margin: 0.32rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }

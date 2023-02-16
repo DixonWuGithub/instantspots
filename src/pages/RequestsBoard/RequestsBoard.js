@@ -1,6 +1,6 @@
+import "./RequestsBoard.scss"
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 
 function RequestBoard({ backupAskName, setBackUpAskName, ask, setAsk, sender, socket, name, id }) {
     const navigate = useNavigate()
@@ -27,8 +27,6 @@ function RequestBoard({ backupAskName, setBackUpAskName, ask, setAsk, sender, so
         }
     }, [socket]);
 
-
-
     const joinAsk = (e) => {
         e.preventDefault();
         setAsk(e.target.innerText)
@@ -36,7 +34,6 @@ function RequestBoard({ backupAskName, setBackUpAskName, ask, setAsk, sender, so
         socket.send(JSON.stringify(joinMessage));
         navigate("/recommendation")
     }
-
 
     const rooms = roomList?.map((room) => {
         return (<div className='roombutton' onClick={joinAsk}>{room.name}</div>)
